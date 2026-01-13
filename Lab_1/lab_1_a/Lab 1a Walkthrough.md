@@ -3,12 +3,12 @@
 ## 1.Create a VPC
 
 * **VPC Dashboard > Create VPC** (Select "VPC and more").
-* **Custom VPC:** "10.0.0.0/16".
-* **Avalibilty Zones (AZs):** minimum of 2.
-* **NAT Gateway:** none.
-* **VPC Endpoints:** none.
-* **DNS Options:** check to ensure that both enable "DNS hostnames and DNS resolutions" are checked.
-* **Create VPC**
+*   **Custom VPC:** "10.0.0.0/16".
+*   **Avalibilty Zones (AZs):** minimum of 2.
+*   **NAT Gateway:** none.
+*   **VPC Endpoints:** none.
+*   **DNS Options:** check to ensure that both enable "DNS hostnames and DNS resolutions" are checked.
+*   **Create VPC**
 
 ## 2. Create Security Groups
 
