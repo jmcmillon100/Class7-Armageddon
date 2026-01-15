@@ -87,17 +87,17 @@
     * **Permissions:** Add the new policy you just created:
     * **Name:** `ArmageddonEC2Role`
     
-#### 6. Update RDS Security Group Rules
+## 6. Update RDS Security Group Rules
 * Go to the **RDS Security Group** (`lab-rds-sg`) 
 * **Edit Inbound rules**:
 	* **Type:** MySQL/Aurora
     * **Protocol:** TCP.
     * **Port Range:** 3306
-	* **Source:** Custom > Select the Security Group ID of `lab-web-sg`.
+	* **Source:** Custom > Select the Security Group ID of `lab-ec2-sg`.
 	* *Remove any other inbound rules.*
 
 
-#### 7. Launch EC2 Instance
+## 7. Launch EC2 Instance
 
 * EC2 Console > **Launch Instance**.
     * **Name:** `Armageddon-Web-Server`.
@@ -109,12 +109,12 @@
         * **Subnet:** Select a public subnet.
         * **Auto-assign Public IP:** Enable.
         * **Security Group:** Select existing security group > `lab-ec2-sg`.
-    * **Advanced settings:**
-        * **IAM role:** Select the role you created earlier (`ArmageddonEC2Role`)
+    * **Advanced details:**
+        * **IAM instance profile:** Select the role you created earlier (`ArmageddonEC2Role`)
         * **User data:** Paste the user data script you have in the empty section.`my_user_data.sh`
     * **Launch Instance**
 
-#### 9. Verification
+## 9. Verification
 
 **Wait for the instance to pass status checks, then test:**
 
