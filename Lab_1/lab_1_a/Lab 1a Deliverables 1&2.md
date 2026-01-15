@@ -5,6 +5,6 @@
 
 This inbound rule restricts traffic strictly to the security group `ec2-lab-sg` on port **3306**. This ensures only our specific EC2 instances can communicate with the database.
 
-![](attachment/Lab_1/lab_1_a/attachments/123456789123456789.png)
+![(attachment/Lab_1/lab_1_a/attachments/123456789123456789.png)
 
 ![](attachment/EC2-SG.png)
