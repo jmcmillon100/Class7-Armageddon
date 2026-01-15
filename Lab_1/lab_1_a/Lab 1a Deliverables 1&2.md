@@ -7,4 +7,4 @@ This inbound rule restricts traffic strictly to the security group `ec2-lab-sg` 
 
 ![](attachments/Lab_1/lab_1_a/attachments/123456789123456789.png)
 
-![](attachments/Lab_1/lab_1_a/attachments/EC2-SG.png)
+
