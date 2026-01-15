@@ -58,7 +58,16 @@
         **select only priavte subnets**
     * **Create**
 
-## 4. Create RDS Database
+## 4. Create Secret in Secrets Manager
+
+* Secrets Manager Console > **Store a new secret**.
+* **Secret type:** Credentials for Amazon RDS database.
+* **Input:** User (`admin`) and the Password you created in Step 3.
+* **Database:** Select `lab-mysql` from the list.
+* **Secret Name:** `rds-secret` (Must match the name used in your application code).
+* **Store Secret.**
+
+## 5. Create RDS Database
 
 * RDS Console > **Create database**.
 * **Creation method:** Standard Create (Full Configuration).
@@ -78,7 +87,7 @@
     * **Create Database**
 * Wait for the RDS instance to be available before proceeding to the next step.
 
-## 5. Create IAM Role for EC2 Instance
+## 6. Create IAM Role for EC2 Instance
 * **IAM Console > Policies > Create policy**
     * **JSON Tab:** Paste the `secretsmanager:GetSecretValue` JSON you have in your resources.
     * **Name:** `ArmageddonSecretPolicy`.
@@ -87,7 +96,8 @@
     * **Permissions:** Add the new policy you just created:
     * **Name:** `ArmageddonEC2Role`
     
-## 6. Update RDS Security Group Rules
+## 7. Update RDS Security Group Rules
+
 * Go to the **RDS Security Group** (`lab-rds-sg`) 
 * **Edit Inbound rules**:
 	* **Type:** MySQL/Aurora
@@ -97,7 +107,7 @@
 	* *Remove any other inbound rules.*
 
 
-## 7. Launch EC2 Instance
+## 8. Launch EC2 Instance
 
 * EC2 Console > **Launch Instance**.
     * **Name:** `Armageddon-Web-Server`.
