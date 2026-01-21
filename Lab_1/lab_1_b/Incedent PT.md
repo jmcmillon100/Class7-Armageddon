@@ -58,6 +58,7 @@ Evidence: CLI output showing active error stream.
 
 CLI Output of CloudWatch logs for log group /aws/ec2/lab-rds-app, using  `DB_CONNECTION_FAILURE` filter:
 
+> ![](attachment/Database_failure.png)
 > ![](attachment/App_logs.png)
 
 **2.2 Identify Failure Type**
@@ -108,7 +109,7 @@ I verified the credentials available to the application to ensure they hadn't be
 
 **Evidence:** Secrets Manager Output retrieved from Application EC2.
 
-> ![](attachment/incident_solution_result.png)
+> ![](attachment/Incident_solution_result.png)
 
 #### **RUNBOOK SECTION 4 — Containment**
 
@@ -152,7 +153,7 @@ I monitored the alarm state to ensure it automatically resolved once the errors 
 
 **Evidence:** CLI command showing Alarm state OK.
 
-> ![](attachment/incident_solution_result_1.png)
+> ![](attachment/Incident_solution_result_1.png)
 
 **6.2 Confirm Logs Normalize**
 
