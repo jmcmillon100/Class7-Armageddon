@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+
+# Terraform
+.terraform/
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+crash.log
+crash.*.log
+.terraform.tfstate.lock.info
+.terraformrc
+terraform.rc
+.terraform.lock.hcl
+
+# Editors
+.vscode/
+.idea/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Keys / secrets
+*.pem
+*.p12
+
+# Archives / packages
+*.zip
+*.rpm
+rpm_packages/
+
+# JSON (keep test fixtures if you have them)
+*.json
+!tests/event.json
+!tests/output.json
