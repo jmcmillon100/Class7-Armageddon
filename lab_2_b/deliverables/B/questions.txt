@@ -1,0 +1,8 @@
+What is my cache key for /api/* and why?
+    The cache key for /api/* effectively disables caching by using a cache policy with TTL = 0. 
+    This ensures CloudFront never reuses API responses, preventing stale reads and eliminating the risk of serving one user’s data to another. 
+    Dynamic API responses must always be origin-driven unless explicitly proven safe to cache.
+
+What am I forwarding to the origin and why?
+    For /api/*, the origin request policy forwards only the headers, query strings, and cookies required by the application. 
+    These values are forwarded to the origin but are not included in the cache key, avoiding cache fragmentation while still ensuring the origin receives all necessary request context.
