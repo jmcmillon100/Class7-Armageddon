@@ -32,7 +32,7 @@ resource "aws_ec2_transit_gateway_peering_attachment_accepter" "tgw_peer_accept_
   transit_gateway_attachment_id = var.tokyo_tgw_peering_attachment_id
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 
   tags = {
